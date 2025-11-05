@@ -1,66 +1,238 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Conteneur principal de la page login */
+#root {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+input, textarea, button {
   font-family: inherit;
-  background-color: #f3eeee;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1rem;
+  color: #333;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #f4f7f8;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+.login-page {
+  background: linear-gradient(to right,#454643, #201f1f);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5%;           
+  background-color: #f5f5f5;
+}
+
+/* Bloc de contenu du formulaire */
+.login-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+
+/* Champs de saisie */
+.login-input,
+.bouton {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* important pour que padding ne casse pas la largeur */
+}
+.login-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center; /* Centrage du texte */
+}
+
+.bouton {
+  color: white;
+  background-color: #007bff;
+}
+.bouton:hover {
+  background-color: #037bfc;
+}
+
+/* Liens */
+.login-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.right-navbar {
+  position: fixed; /* reste visible même quand on scroll */
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh; /* prend toute la hauteur */
+  background-color: #1f1f1f;
+  color: white;
+  padding: 30px 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+/* Home.css — style façon Instagram */
+
+.home-page {
+  margin-right: 180px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fafafa;
+}
+
+.title h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #262626;
+  margin-bottom: 10px;
+}
+
+.home-page p {
+  text-align: center;
+  font-size: 1rem;
+  color: #8e8e8e;
+  margin-bottom: 30px;
+}
+
+/* Post card style */
+.post-card {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.post-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.post-username {
+  font-weight: 600;
+  color: #262626;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  background-color: #eee;
+}
+
+.post-caption {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #262626;
+}
+
+.post-footer {
+  padding: 0 16px 12px;
+  font-size: 0.85rem;
+  color: #8e8e8e;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.messagerie-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.message {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.message.own {
+  background-color: #d1ffd1;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.message-text {
+  margin-top: 5px;
+}
+
+.message-input {
+  display: flex;
+  gap: 10px;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.message-input button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }

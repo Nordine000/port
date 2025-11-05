@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import RightNavbar from '../Composant/RightNavbar';
 import Post from '../Composant/Post';
-import App from '../../App.css';
+import "../index.css";
+import "../App.css";
 
 
 const fakePosts = [
@@ -41,7 +42,6 @@ function Home() {
     <div className="home-page">
     <header className='title'><h1>Athletia</h1></header>
       <p>Partage tes exploits et montre le au monde.</p>
-      <RightNavbar />
       {fakePosts.map(post => (
         <Post key={post.id} post={post} />
       ))}

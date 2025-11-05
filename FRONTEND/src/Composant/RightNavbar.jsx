@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, List, ListItem, Typography, Button } from '@mui/material';
 import { Home as HomeIcon, Info, Work, ContactMail } from '@mui/icons-material';
+import { Settings } from '@mui/icons-material';
 
 import { Link } from 'react-router-dom';
 import CreateUser from '../pages/inscription';
@@ -15,11 +16,13 @@ export default function RightNavbar() {
     { label: 'Recherche', icon: <Info />, path: '/recherche' },
     { label: 'Découvrir', icon: <Info />, path: '/Decouvrir' },
     { label: 'Shorts', icon: <Info />, path: '/Shorts' },
-    { label: 'Message', icon: <Info />, path: '/Messagerie' },
+    { label: 'Message', icon: <Info />, path: '/message' },
     { label: 'Notifications', icon: <Info />, path: '/Notifications' },
     { label: 'Tableau de bord', icon: <Info />, path: '/Tableau de bord' },
     { label: 'Profil', icon: <Work />, path: '/profilUser' },
     { label: 'Contact', icon: <ContactMail />, path: '/inscription' },
+    { label: 'Profil Recruteur', icon: <Work />, path: '/profil-recruteur' },
+    { label: 'Paramètres', icon: <Settings />, path: '/parametres' },
   ];
 
   return (
